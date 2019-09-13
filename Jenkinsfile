@@ -79,19 +79,16 @@ node {
   try {
     //  
     stage('Build') {
-      /*
-      */
+      sh 'tln prereq:init:build'
     }
 
     //
     stage('Unit tests') {
-      /*
-      */
+      sh 'tln lint:test'
     }
 
     //
     stage('SonarQube analysis') {
-      /*
       printTopic('Sonarqube properties')
       echo sh(returnStdout: true, script: 'cat sonar-project.properties')
       def scannerHome = tool "${SONARQUBE_SCANNER}"
@@ -127,7 +124,6 @@ node {
           }
         }
       }
-      */
     }
     
     //  
