@@ -1,8 +1,8 @@
 #sonar.host.url=${SONARQUBE_HOST}
 #sonar.login=${SONARQUBE_ACCESS_TOKEN}
 
-sonar.projectKey=org.talan.angular
-sonar.projectName=org.talan.angular
+sonar.projectKey=org.talan.react
+sonar.projectName=org.talan.react
 sonar.projectVersion=${COMPONENT_VERSION}
 sonar.sourceEncoding=UTF-8
 sonar.sources=src
@@ -12,4 +12,4 @@ sonar.test.inclusions=**/*.spec.ts
 
 #sonar.typescript.node=
 #sonar.typescript.exclusions=
-sonar.typescript.lcov.reportPaths=coverage/lcov.info
+#sonar.typescript.lcov.reportPaths=coverage/lcov.info
