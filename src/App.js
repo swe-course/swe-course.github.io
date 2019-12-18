@@ -1,22 +1,33 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route/*, Link, Redirect*/ } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Link/*, Redirect*/ } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 
 import Home from './pages/Home/Home';
+import Calendar from './pages/Calendar/Calendar';
+import Links from './pages/Links/Links';
 
 document.body.classList.add('container-fluid', 'p-0', 'h-100');
 
 function App() {
   return (
     <div className="App d-flex flex-column h-100">
-      <Navbar hostUrl="." titleShort="MVTs - React" titleLong="Minimum Viable Templates - React"/>
+      <Navbar hostUrl="." titleShort="SWE Course" titleLong="Software Engineering Course"/>
+          <div className="container-fluid bg-light">
+            <div className="row text-right">
+              <div className="offset-sm-8 col-sm small d-none">
+                <Link to={'/calendar'} className="text-dark">calendar</Link> &#183; <Link to={'/links'} className="text-dark">links</Link>
+              </div>
+            </div>
+          </div>
       <Switch>
         <Route exact path='/' component={Home} />
         <Route exact path='/home' component={Home} />
+        <Route exact path='/calendar' component={Calendar} />
+        <Route exact path='/links' component={Links} />
       </Switch>
-      <Footer version="v19.12.0"/>
+      <Footer version="v19.12.4"/>
     </div>
   );
 }
