@@ -40,7 +40,7 @@ node {
     env.COMPONENT_ID = id
     env.COMPONENT_VERSION = version
   }
-    
+
   try {
 
     stage('Setup build environment') {
@@ -52,7 +52,7 @@ node {
     }
 
     stage('Unit tests') {
-      sh 'tln lint:test'
+    sh 'tln test'
     }
 
     stage('SonarQube analysis') {
