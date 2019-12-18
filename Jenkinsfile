@@ -31,8 +31,9 @@ node {
     //
     // Create config for detached build
     sh "echo '{\"detach-presets\": \"${TALAN_PRESETS_PATH}\"}' > '.tlnclirc'"
+
     //
-    // Project specific steps
+    // Get information from project's config
     (groupId, artifactId, id, version) = helper.getInfoFromPackageJson()
     env.COMPONENT_GROUP_ID = groupId
     env.COMPONENT_ARTIFACT_ID = artifactId
