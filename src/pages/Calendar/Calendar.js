@@ -1,4 +1,3 @@
-import React from 'react';
 import './Calendar.css';
 import BasePage from './../BasePage/BasePage';
 

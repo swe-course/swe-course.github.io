@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { Switch, Route, Link } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
@@ -17,7 +17,7 @@ function App() {
       <Navbar hostUrl="." titleShort="SWE Course" titleLong="Software Engineering Course"/>
           <div className="container-fluid bg-light">
             <div className="row text-right">
-              <div className="offset-sm-8 col-sm small">
+              <div className="offset-sm-8 col-sm small pr-5 mr-sm-5">
                 <Link to={'/calendar'} className="text-dark">calendar</Link> &#183; <Link to={'/blog'} className="text-dark">blog</Link> &#183; <Link to={'/links'} className="text-dark">links</Link>
               </div>
             </div>
@@ -29,7 +29,7 @@ function App() {
         <Route exact path='/blog' component={Blog} />
         <Route exact path='/links' component={Links} />
       </Switch>
-      <Footer version="v19.12.4"/>
+      <Footer version="v19.12.5"/>
     </div>
   );
 }

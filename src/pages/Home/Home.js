@@ -1,5 +1,11 @@
 import React from 'react';
 import './Home.css';
+import { Link } from 'react-router-dom';
+import FaceIcon from '@material-ui/icons/Face';
+import BusinessIcon from '@material-ui/icons/Business';
+import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
+import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+import Icon from '@material-ui/core/Icon';
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -9,7 +15,6 @@ export default class Home extends React.Component {
       topics: [
         {
           "title": "Motivation",
-          "image": "motivation.png",
           "text": [
             "Extremelly high rate of changes in IT leads to the next issue: young engineers miss fundamental ideas, principles and invariants. 'Ten thousands hours rule' seems like not working any more. You need much more time to see big picture.",
             "That is why the main goal of the course is help to develop strong understanding of modern software development process, show where software development complexity really is and what trends will define industry in next 5 years."
@@ -19,7 +24,6 @@ export default class Home extends React.Component {
         },
         {
           "title": "Target audience",
-          "image": "audience.jpg",
           "text": [
             "IT engineers are involved into software development process (junior/junior+)"
           ],
@@ -32,7 +36,6 @@ export default class Home extends React.Component {
         },
         {
           "title": "Deliverables",
-          "image": "deliverables.png",
           "text": [
             "Participants will"
           ],
@@ -50,7 +53,6 @@ export default class Home extends React.Component {
         },
         {
           "title": "Course numbers",
-          "image": "numbers.png",
           "text": [
             ""
           ],
@@ -64,15 +66,15 @@ export default class Home extends React.Component {
       sections: [
         {
           title: "Introduction",
-          image: "introduction.jpg",
           text: "Course overview, deliverables, collaboration mechanism, homeworks and tasks. Collect expectation, tech stacks. Define goals & KPIs.",
+          visible: true,
           subsections: [
           ]
         },
         {
           title: "Continuous Integration",
-          image: "continuous-integration.png",
           text: "This section is focused on modern software development process. What are the key artifacts, how team members should collaborate to be able to quickly achieve goals? Main actors here are source control management, job scheduler, code quality tools and artifacts' storage",
+          visible: true,
           subsections: [
             {
               title: "Source Control Management Systems - Git",
@@ -102,8 +104,8 @@ export default class Home extends React.Component {
         },
         {
           title: "Continuous Testing",
-          image: "continuous-testing.png",
           text: "Code quality is one the major artifact of software development, especially when business side requires quick adaptation and short release cycle. What types of tests dev team should use, how to prevent regression when new code is pushed into repository, how code review can improve the quality of the code. This section will cover unit tests, code coverage and quality gates.",
+          visible: false,
           subsections: [
             {
               title: "SonarQube, Code coverage, Instrumentalization",
@@ -133,14 +135,14 @@ export default class Home extends React.Component {
         },
         {
           title: "Software architecture",
-          image: "software-architecture.jpg",
           text: "Vast majority of the software today is XaaS based or oriented (SaaS, PaaS, IaaS, etc). Furthermore, every business domain adds tons of different requirements to the solutions. That is why every developer should be familiar with various types of software architecture and how to work with different quality factors to create applications. How, from one side, meet customer expectations and, from the other side, be able to evolve without full solution re-development.",
+          visible: false,
           subsections: [
             {
               title: "Software external quality factors: correctness, robustness, extensibility, reusability, etc.",
               inclass: "value of quality factors, modern software challanges, trends",
               homework: "",
-              duration: 1
+              duration: 2
             },
             {
               title: "Architecture types: Standalone, N-tier, SOA, Microservices, Serverless, Web-Queue-Worker, Event-driven architecture, Big Data/Big Compute",
@@ -152,7 +154,7 @@ export default class Home extends React.Component {
               title: "Requirements gathering, Pre-sales, Estimates, RFI/RFP",
               inclass: "how is software development integrated into other businesses? how sales work in software domain: product, oursource, outstaff define list of unique sales points for developed product, apply priorities, setup roadmap",
               homework: "",
-              duration: 1
+              duration: 2
             }
           ]
         },
@@ -160,6 +162,7 @@ export default class Home extends React.Component {
           title: "Software design",
           image: "software-design.png",
           text: "Most of the best practises are invariant to the tech stacks. This section contains material aims to teach how to effectively use different instruments, like OOP, data structures, design graphical representation, distributed calculation etc. Current state of the art is Polyglot Persistence & Polyglot Programming, when development should know how to use more than one tool or language.",
+          visible: false,
           subsections: [
             {
               title: "General project organization structure, component model, multi-component management system, minimum viable templates",
@@ -171,13 +174,13 @@ export default class Home extends React.Component {
               title: "Data structures, key programming paradigms: procedural, object-oriented, functional, logic. Compilers vs Interpreters, Processes & Threads",
               inclass: "why do we need multiple computational model, muli-paradigms languages, how compiler & interpreter work, key data structures, Big O notation",
               homework: "",
-              duration: 2
+              duration: 1
             },
             {
-              title: "“The Clean Architecture”, Designs patterns, GRASP, UML, T-diagrams, MVC(MVVM), BFF - Backend For Frontend",
-              inclass: "define list of features for the test project, create high-level product’s UML diagram(s)",
+              title: "'The Clean Architecture', Designs patterns, GRASP, UML, T-diagrams, MVC(MVVM), BFF - Backend For Frontend",
+              inclass: "define list of features for the test project, create high-level product's UML diagram(s)",
               homework: "",
-              duration: 2
+              duration: 1
             },
             {
               title: "Inheritance vs Composition vs Aggregation, Composition vs Decomposition",
@@ -225,7 +228,7 @@ export default class Home extends React.Component {
               title: "Multi-tenancy, Audit, Branding, GDPR Compliance",
               inclass: "",
               homework: "",
-              duration: 4
+              duration: 3
             },
             {
               title: "Waterfall, RUP, Agile",
@@ -243,7 +246,7 @@ export default class Home extends React.Component {
               title: "Multithreading, Client-Server, P2P, Distributed computing, Lock-free algorithms, Caching, Journaling, Metaprogramming/Generics",
               inclass: "",
               homework: "",
-              duration: 4
+              duration: 3
             },
             {
               title: "Interprocess communication: mutex, semaphore, pipe, shared memory etc.",
@@ -255,11 +258,11 @@ export default class Home extends React.Component {
         },
         {
           title: "API",
-          image: "api.png",
-          text: "Like in real world, software components should communicate to generate value. It’s not straightforward to build clean, orthogonal communication channel or API - Application Programming Interface. This subset of lectures will unfold how communication is done at different levels of software, how to manage requirements for enterprise solutions and why it’s so important to spend dev time designing APIs.",
+          text: "Like in real world, software components should communicate to generate value. It's not straightforward to build clean, orthogonal communication channel or API - Application Programming Interface. This subset of lectures will unfold how communication is done at different levels of software, how to manage requirements for enterprise solutions and why it's so important to spend dev time designing APIs.",
+          visible: false,
           subsections: [
             {
-              title: "Orthogonal API, Contract programming, SOLID",
+              title: "Orthogonal API, Contract programming, S.O.L.I.D.",
               inclass: "",
               homework: "",
               duration: 2
@@ -274,13 +277,13 @@ export default class Home extends React.Component {
               title: "API management, API versioning, Pagination, Rate limits, Search",
               inclass: "Elasticsearch based microservice, configurable rate limits, (KONG, APIGee)",
               homework: "build CRUD for search API",
-              duration: 6
+              duration: 3
             },
             {
               title: "AI (ML/DL) overview",
               inclass: "tensorflow.js as part of frontend service",
               homework: "",
-              duration: 2
+              duration: 1
             }
           ]
         },
@@ -288,6 +291,7 @@ export default class Home extends React.Component {
           title: "Continuous Delivery",
           image: "continuous-delivery.png",
           text: "Modern software development process is very complex system by itself. A lot of types of artifacts are involved into different development, testing and deployment flows. Source code is only one part of it. We will focus on Docker and satellite technologies, since this ecosystem is standard de facto now. How to package your application, how to deliver it to users (other developers, test engineers, devops, customers) will be our main items here",
+          visible: false,
           subsections: [
             {
               title: "Artifacts repository",
@@ -311,8 +315,8 @@ export default class Home extends React.Component {
         },
         {
           title: "Continuous Deployment",
-          image: "continuous-deployment.png",
-          text: "One of the key attributes of the mature development environment is how quickly team can deploy any version of software using source code only. This extremely helpful when you need to work with customer’s escalation. That is why smooth deployment process really shines saving huge amount of development time and helping very much to reduce costs",
+          text: "One of the key attributes of the mature development environment is how quickly team can deploy any version of software using source code only. This extremely helpful when you need to work with customer's escalation. That is why smooth deployment process really shines saving huge amount of development time and helping very much to reduce costs",
+          visible: false,
           subsections: [
             {
               title: "Different types of environments (dev, qa, uat, prod)",
@@ -321,10 +325,10 @@ export default class Home extends React.Component {
               duration: 1
             },
             {
-              title: "Blue/Green, A/B, Canary deployment, 0-downtime, Rolling updates “Follow the sun” strategy",
+              title: "Blue/Green, A/B, Canary deployment, 0-downtime, Rolling updates 'Follow the sun' strategy",
               inclass: "setup blue/green deployment",
               homework: "",
-              duration: 4
+              duration: 3
             },
             {
               title: "Environment variables, secrets, vaults",
@@ -336,26 +340,26 @@ export default class Home extends React.Component {
               title: "Kubernetes, Service mesh (Istio, Maesh/Linkerd, Anthos) overview",
               inclass: "",
               homework: "",
-              duration: 4
+              duration: 3
             }
           ]
         },
         {
           title: "Continuous Operation",
-          image: "continuous-operation.png",
           text: "Near 40% of software costs are maintenance. This includes support your service at production side and work with issues from the customers. This section will cover the main tools & solutions from operations area and what and how developer should add into application during development stage to make life a little bit easier for SRE engineers and L1/L2/L3 support teams",
+          visible: false,
           subsections: [
             {
               title: "Monitoring, Measuring, Alerting",
               inclass: "ELK cluster, collecting logs from microservices using Prometheus",
               homework: "",
-              duration: 4
+              duration: 5
             },
             {
               title: "Backup, Recovery strategy, Support (L1/L2/L3)",
               inclass: "",
               homework: "",
-              duration: 1
+              duration: 2
             },
             {
               title: "SRE, SLIs, SLOs, SLAs",
@@ -369,6 +373,7 @@ export default class Home extends React.Component {
           title: "Clouds",
           image: "clouds.png",
           text: "Now, we can definitely say that On-Demand is major software delivery mechanism. Of course On-Premise type of deployment will exist, but in specific cases and for specific type of sensitive data. The main role in this transformation plays virtualization at hardware and software levels. We can see that even development itself uses cloud solutions to simplify DevOps activities. Cloud era also brings new architecture patterns which help to deal with tremendous complexity of Hybrid Cloud applications. These and other trends will be our topics in Clouds section",
+          visible: false,
           subsections: [
             {
               title: "Virtualization, Hardware level/User level",
@@ -418,7 +423,7 @@ export default class Home extends React.Component {
   renderTopics() {
     return this.state.topics.map((topic, ti) => {
       const last = ti === this.state.topics.length - 1;
-      const { title, image, text, points } = topic;
+      const { title, text, points } = topic;
       //
       return (
         <div key={ti.toString()}>
@@ -445,7 +450,7 @@ export default class Home extends React.Component {
         <div className="row">
           {
             this.state.sections.map((section, si) => {
-              const { title, image, text, duration, subsections } = section;
+              const { title, text, visible, duration, subsections } = section;
               return (
                 <div key={si.toString()} className="col-12">
                   <div className="conainer-fluid">
@@ -455,7 +460,7 @@ export default class Home extends React.Component {
                     <div className="row">
                       <div className="col">{text}</div>
                     </div>
-                      {subsections.map((subsection, ssi) => 
+                      {visible && subsections.map((subsection, ssi) => 
                         <div key={ssi.toString()} className="row m-0 pt-2">
                           <div className="col-1 1offset-sm-1 p-1 bg-light text-center">{si}.{ssi+1}</div>
                           <div className="col p-1"><span className="font-weight-bold">{subsection.title}</span>
@@ -469,6 +474,13 @@ export default class Home extends React.Component {
                           <div className="col-1 p-1 text-center bg-light">{subsection.duration}h</div>
                         </div>
                         )}
+                    { (subsections.length !== 0) && (<div className="row p-0 m-0">
+                      <div className="col text-center">
+                        <button className="btn btn-link text-info p-0" onClick={() => { section.visible = !section.visible; this.forceUpdate();} }>
+                          <span className="small">{section.visible?(<ArrowDropUpIcon/>):(<ArrowDropDownIcon/>)}{section.visible?'less':'more'}</span>
+                        </button>
+                      </div>
+                    </div> )}
                   </div>
                 </div>
               );
@@ -498,11 +510,33 @@ export default class Home extends React.Component {
             </div>
           </div>
         </div>
-        <div className="jumbotron bg-light border-0 rounded-0 m-0 mt-4">
+        <div className="jumbotron bg-light border-0 rounded-0 m-0 mt-4 pb-2">
           <div className="container-fluid">
-            <div className="row">
-              <div className="offset-sm-2 col-sm-8">
-              </div>
+            <div className="row text-center">
+              {[
+                  { 
+                    icon: FaceIcon,
+                    text: 'As an individual engineer you can go to the calendar section and book seat for the nearest upcoming training',
+                    linkRef: '/calendar',
+                    linkText: 'Book'
+                  },
+                  { 
+                    icon: BusinessIcon,
+                    text: 'As a company representative you can request full course or specific subset of lectures which meets your requirements the best',
+                    linkRef: '/calendar',
+                    linkText: 'Request'
+                  }
+                ].map((t, ti) => 
+                  <div key={ti.toString()} className={(ti === 0 ? "offset-sm-2": "") + " col-sm-4 pb-5"}>
+                    <div><Icon component={t.icon} style={{ fontSize: 64 }}></Icon></div>
+                    <p className="p-2">{t.text}</p>
+                    <Link to={t.linkRef} className="text-decoration-none">
+                      <div className="ml-4 pr-4">
+                        <button type="button" className="btn btn-info btn-block">{t.linkText}</button>
+                      </div>
+                    </Link>
+                  </div>
+              )}
             </div>
           </div>
         </div>
