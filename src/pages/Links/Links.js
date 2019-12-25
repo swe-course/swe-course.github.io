@@ -78,7 +78,7 @@ export default class Calendar extends BasePage {
         <div className="row text-left">
           {this.state.links.map((l, li) => 
             <div key={li.toString()} className="offset-sm-3 col-sm-6 p-1">
-              <Link to={l.url} className="text-decoration-none text-secondary">{l.title}</Link>
+              <a href={l.url} target="_blank" className="text-decoration-none text-secondary">{l.title}</a>
             </div>
            )}
         </div>
