@@ -17,7 +17,7 @@ function App() {
       <Navbar hostUrl="." titleShort="SWE Course" titleLong="Software Engineering Course"/>
           <div className="container-fluid bg-light">
             <div className="row text-right">
-              <div className="offset-sm-8 col-sm small pr-5 mr-sm-5">
+              <div className="offset-sm-8 col-sm small pr-5 mr-sm-5 pb-1">
                 <Link to={'/calendar'} className="text-dark">calendar</Link> &#183; <Link to={'/blog'} className="text-dark">blog</Link> &#183; <Link to={'/links'} className="text-dark">links</Link>
               </div>
             </div>
@@ -29,7 +29,7 @@ function App() {
         <Route exact path='/blog' component={Blog} />
         <Route exact path='/links' component={Links} />
       </Switch>
-      <Footer version="v19.12.5"/>
+      <Footer version="v19.12.6"/>
     </div>
   );
 }

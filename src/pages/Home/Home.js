@@ -78,25 +78,25 @@ export default class Home extends React.Component {
           subsections: [
             {
               title: "Source Control Management Systems - Git",
-              inclass: "cli-only github repo, ssh connection, commit, branch, remote, submodule, subtree, tag, stash, merge, rebase, log features",
+              inclass: "Setup ssh-based connection with remote VM, create bare git repository, play with commit, branch, remote, submodule, subtree, tag, stash, merge, rebase and log features",
               homework: "",
               duration: 2
             },
             {
               title: "Branching & Release models",
-              inclass: "pros & cons for mono-repo & multi-repo setup, gitflow weak & strong sides, SaaS oriented release mode, push & drop concepts, 12-factor framework",
+              inclass: "Review pros & cons for mono-repo & multi-repo setup, discover gitflow as a basis for CI, become familiar with SaaS oriented release mode, push & drop concepts, discuss 12-factor framework and semantic versioning",
               homework: "",
               duration: 2
             },
             {
               title: "Jenkins",
-              inclass: "skeleton for pull-request/push build using Jenkins DSL",
-              homework: "naming convention status check",
+              inclass: "Setup skeleton for pull-request/push CI build using Jenkins DSL and microservice repository",
+              homework: "Add naming convention status check",
               duration: 2
             },
             {
               title: "Github",
-              inclass: "pull-requests based development workflow, pros & cons for fork-based & master-repo-based approaches, build status check using web hooks",
+              inclass: "Integrate pull-requests based development workflow, discuss pros & cons for fork-based & master-repo-based approaches, setup status checks using web hooks",
               homework: "",
               duration: 2
             }
@@ -462,7 +462,7 @@ export default class Home extends React.Component {
                     </div>
                       {visible && subsections.map((subsection, ssi) => 
                         <div key={ssi.toString()} className="row m-0 pt-2">
-                          <div className="col-1 1offset-sm-1 p-1 bg-light text-center">{si}.{ssi+1}</div>
+                          <div className="col-1 p-1 bg-light text-center">{si}.{ssi+1}</div>
                           <div className="col p-1"><span className="font-weight-bold">{subsection.title}</span>
                           <div>
                              {(subsection.inclass) && (<span className="badge badge-pill badge-light">in class</span>)} <span className="">{subsection.inclass}</span>
