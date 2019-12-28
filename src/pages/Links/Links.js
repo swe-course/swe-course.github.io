@@ -48,6 +48,11 @@ export default class Calendar extends BasePage {
               tags: ['reusability']
             },
             {
+              title: 'Software Architecture - The Difference Between Architecture and Design',
+              url: 'https://codeburst.io/software-architecture-the-difference-between-architecture-and-design-7936abdd5830',
+              tags: []
+            },
+            {
               title: 'Application Architecture',
               url: 'https://docs.microsoft.com/en-us/azure/architecture/guide/',
               tags: ['']

@@ -29,7 +29,7 @@ function App() {
         <Route exact path='/blog' component={Blog} />
         <Route exact path='/links' component={Links} />
       </Switch>
-      <Footer version="v19.12.6"/>
+      <Footer version="v19.12.7"/>
     </div>
   );
 }

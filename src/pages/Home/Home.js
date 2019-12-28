@@ -16,8 +16,9 @@ export default class Home extends React.Component {
         {
           "title": "Motivation",
           "text": [
-            "Extremelly high rate of changes in IT leads to the next issue: young engineers miss fundamental ideas, principles and invariants. 'Ten thousands hours rule' seems like not working any more. You need much more time to see big picture.",
-            "That is why the main goal of the course is help to develop strong understanding of modern software development process, show where software development complexity really is and what trends will define industry in next 5 years."
+            "Extremelly high rate of changes in IT brigs up next challange: young engineers miss fundamental ideas, principles and invariants in Software Development domain.",
+            "'Ten thousands hours rule' seems like not working any more. You need much more time to see big picture.",
+            "That is why the main goal of the course is help to develop strong understanding of modern software development process, discovery key sources of complexity and be aligned with IT trends."
           ],
           "points": [
           ]
@@ -40,9 +41,9 @@ export default class Home extends React.Component {
             "Participants will"
           ],
           "points": [
-            "become familiar with modern SDLC (Software Development Life Cycle), including Git SCMS (Source Control Management System), code review process, Pull Request/Push builds, TDD (Test Driven Development)",
-            "have detailed information about Release & Branching models, when and why use User Story Isolation, how to collaborate inside development team",
-            "be able to setup Continuous Integration subsystems based on Jenkins, configure integrations between Github, Jenkins, SonarQube & Nexus based on webhooks",
+            "become familiar with modern SDLC (Software Development Life Cycle), including Git SCM (Source Control Management), code review process, Pull Request/Push builds, TDD (Test Driven Development)",
+            "have detailed information about Release and Branching models, when and why use User Story Isolation, how to set up an effective collaboration ecosystem within development team",
+            "be able to setup Continuous Integration subsystems based on Jenkins, configure integrations between Github, Jenkins, SonarQube & Nexus",
             "setup simple testing framework, including unit tests, end-to-end tests, smoke tests, build regression plan, configure SonarQube to work with code coverage and Quality Gates",
             "understand difference between Software Architecture & Software design, know how and when use different patterns and how to transform business inputs into technical terms. When is N-tier architecture better then Microservices and vise versa",
             "be able to build RESTful and GraphQL APIs, have strong understanding about Orthogonal API and how build it, decompose high-level tasks using Design Patterns",
@@ -58,7 +59,7 @@ export default class Home extends React.Component {
           ],
           "points": [
             "Schedule: 4h per day, 2 times per week",
-            "Optimal class size: 8-12 students",
+            "Optimal class size: 12-15 students",
             "Duration: "
           ]
         }
@@ -66,37 +67,37 @@ export default class Home extends React.Component {
       sections: [
         {
           title: "Introduction",
-          text: "Course overview, deliverables, collaboration mechanism, homeworks and tasks. Collect expectation, tech stacks. Define goals & KPIs.",
+          text: "Course overview, deliverables, collaboration mechanism, homeworks and tasks. Collect expectations, details about tech stacks. Define goals & KPIs.",
           visible: true,
           subsections: [
           ]
         },
         {
           title: "Continuous Integration",
-          text: "This section is focused on modern software development process. What are the key artifacts, how team members should collaborate to be able to quickly achieve goals? Main actors here are source control management, job scheduler, code quality tools and artifacts' storage",
+          text: "Modern software development process. What are the key artifacts? How team members should collaborate to be able to quickly achieve goals? Main actors here are source control management, job scheduler, code quality verification tools and storage for artifacts.",
           visible: true,
           subsections: [
             {
               title: "Source Control Management Systems - Git",
-              inclass: "Setup ssh-based connection with remote VM, create bare git repository, play with commit, branch, remote, submodule, subtree, tag, stash, merge, rebase and log features",
+              inclass: "Setup ssh-based connection with remote VM, create bare git repository, play with commit, branch, remote, submodule, subtree, tag, stash, merge, rebase and log features.",
               homework: "",
               duration: 2
             },
             {
               title: "Branching & Release models",
-              inclass: "Review pros & cons for mono-repo & multi-repo setup, discover gitflow as a basis for CI, become familiar with SaaS oriented release mode, push & drop concepts, discuss 12-factor framework and semantic versioning",
+              inclass: "Review pros & cons for mono-repo & multi-repo setup, discover gitflow as a basis for CI, become familiar with SaaS oriented release mode, push & drop concepts, discuss 12-factor framework and semantic versioning.",
               homework: "",
               duration: 2
             },
             {
               title: "Jenkins",
-              inclass: "Setup skeleton for pull-request/push CI build using Jenkins DSL and microservice repository",
-              homework: "Add naming convention status check",
+              inclass: "Setup skeleton for pull-request/push CI build using Jenkins DSL and microservice repository.",
+              homework: "Add naming convention status check.",
               duration: 2
             },
             {
               title: "Github",
-              inclass: "Integrate pull-requests based development workflow, discuss pros & cons for fork-based & master-repo-based approaches, setup status checks using web hooks",
+              inclass: "Integrate pull-requests based development workflow, discuss pros & cons for fork-based & master-repo-based approaches, setup status checks using web hooks.",
               homework: "",
               duration: 2
             }
@@ -104,30 +105,30 @@ export default class Home extends React.Component {
         },
         {
           title: "Continuous Testing",
-          text: "Code quality is one the major artifact of software development, especially when business side requires quick adaptation and short release cycle. What types of tests dev team should use, how to prevent regression when new code is pushed into repository, how code review can improve the quality of the code. This section will cover unit tests, code coverage and quality gates.",
+          text: "Code quality is one of the major artifacts in software development, especially when business side requires quick adaptation and short release cycle. What types of tests dev team should use, how to prevent regression when new code is pushed into repository, how code review can improve the quality of final product. This section will cover unit tests, e2e tests, tests planning code coverage and quality gates.",
           visible: false,
           subsections: [
             {
               title: "SonarQube, Code coverage, Instrumentalization",
-              inclass: "static code analysis, sonarqube status check, code coverage upload step, Quality Gates",
-              homework: "create new Quality Gate profile, add additional conditions",
+              inclass: "Add static code analysis step indo CI flow as GitHub status check, upload unit tests code coverage, setup Quality Gates.",
+              homework: "Create new Quality Gate profile, extend it with additional conditions.",
               duration: 2
             },
             {
               title: "Code review process, User Story Isolation mechanics",
               inclass: "",
-              homework: "setup Pull Request code review",
+              homework: "Setup Pull Request code review process.",
               duration: 1
             },
             {
               title: "TDD - Test Driven development",
-              inclass: "nodejs based micro service for authentication, unit-tests infrastructure, e2e tests and code coverage calculation",
+              inclass: "Create nodejs based micro service for authentication, setup unit-tests infrastructure, add e2e tests and code coverage calculation.",
               homework: "",
               duration: 2
             },
             {
               title: "Test planning, Performance, Regression & Security testing, Vulnerability scanning, Automation e2e & UI testing, Manual testing",
-              inclass: "third parties scan solution, high level test plan, simple regression plan, smoke tests scope",
+              inclass: "Integrate third parties scan solution, create high level test plan, setup simple regression plan, define smoke tests scope.",
               homework: "",
               duration: 3
             }
@@ -135,24 +136,24 @@ export default class Home extends React.Component {
         },
         {
           title: "Software architecture",
-          text: "Vast majority of the software today is XaaS based or oriented (SaaS, PaaS, IaaS, etc). Furthermore, every business domain adds tons of different requirements to the solutions. That is why every developer should be familiar with various types of software architecture and how to work with different quality factors to create applications. How, from one side, meet customer expectations and, from the other side, be able to evolve without full solution re-development.",
+          text: "Vast majority of the software today is XaaS based or oriented (SaaS, PaaS, IaaS, etc). Furthermore, every business domain adds tons of different requirements to the solutions. That is why every developer should be familiar with various types of software architecture and how to work with different quality factors to create a service, which meets customer's expectations and be able to evolve without full re-development.",
           visible: false,
           subsections: [
             {
               title: "Software external quality factors: correctness, robustness, extensibility, reusability, etc.",
-              inclass: "value of quality factors, modern software challanges, trends",
+              inclass: "Learn how quality factors define architecture and help to select optimal pattern, understand modern software development challenges, unfold software development evolution and trends.",
               homework: "",
               duration: 2
             },
             {
               title: "Architecture types: Standalone, N-tier, SOA, Microservices, Serverless, Web-Queue-Worker, Event-driven architecture, Big Data/Big Compute",
-              inclass: "what is software architecture? which issues every model are addressed? when use and how properly align whole development process with selected type, hybrid solutions, discuss appropriate architecture for PoC",
+              inclass: "What is software architecture? How does every architecture model help to address customer's challanges? When to use and how properly align whole development process with selected type. Hybrid solutions. Select optimal architecture for PoC.",
               homework: "",
               duration: 4
             },
             {
               title: "Requirements gathering, Pre-sales, Estimates, RFI/RFP",
-              inclass: "how is software development integrated into other businesses? how sales work in software domain: product, oursource, outstaff define list of unique sales points for developed product, apply priorities, setup roadmap",
+              inclass: "How is software development integrated into other businesses? How sales deparment work in software domain: product, oursource, outstaff. Define list of unique sales points for PoC, apply priorities, setup roadmap.",
               homework: "",
               duration: 2
             }
@@ -161,18 +162,18 @@ export default class Home extends React.Component {
         {
           title: "Software design",
           image: "software-design.png",
-          text: "Most of the best practises are invariant to the tech stacks. This section contains material aims to teach how to effectively use different instruments, like OOP, data structures, design graphical representation, distributed calculation etc. Current state of the art is Polyglot Persistence & Polyglot Programming, when development should know how to use more than one tool or language.",
+          text: "Most of the best practises are invariant to the tech stacks. This section contains material aims to teach how to effectively use different instruments, like OOP, data structures, design graphical representation, distributed calculation etc. Current state of the art is Polyglot Persistence & Polyglot Programming, when developer should know how to use more than one tool or language.",
           visible: false,
           subsections: [
             {
               title: "General project organization structure, component model, multi-component management system, minimum viable templates",
-              inclass: "project repository structure, skeleton for initial set of microservices & DBs, scripts for DevOps flow",
+              inclass: "Setup project repository structure. Build skeleton for initial set of microservices & DBs. Create basic scripts for DevOps flow.",
               homework: "",
-              duration: 2
+              duration: 1
             },
             {
               title: "Data structures, key programming paradigms: procedural, object-oriented, functional, logic. Compilers vs Interpreters, Processes & Threads",
-              inclass: "why do we need multiple computational model, muli-paradigms languages, how compiler & interpreter work, key data structures, Big O notation",
+              inclass: "Why do we need multiple computational model. Muli-paradigms languages. How do compiler & interpreter work. Key data structures. Big O notation.",
               homework: "",
               duration: 1
             },
@@ -183,20 +184,14 @@ export default class Home extends React.Component {
               duration: 1
             },
             {
-              title: "Inheritance vs Composition vs Aggregation, Composition vs Decomposition",
-              inclass: "key integration options between components, development process using up-down or down-up approaches",
-              homework: "",
-              duration: 1
-            },
-            {
-              title: "Documentation, Error handling",
-              inclass: "swagger",
-              homework: "setup CI steps to autogenerate & publish documentation",
+              title: "Inheritance vs Composition vs Aggregation, Composition vs Decomposition, Documentation, Error handling",
+              inclass: "Key integration options between components. Development process using up-down or down-up approaches. Swagger.",
+              homework: "Setup CI steps to autogenerate & publish documentation",
               duration: 1
             },
             {
               title: "Polyglot programming, Polyglot persistence",
-              inclass: "java|go based microservice for REST API",
+              inclass: "Java|Go based microservice for REST API.",
               homework: "",
               duration: 1
             },
@@ -208,7 +203,7 @@ export default class Home extends React.Component {
             },
             {
               title: "Authentication and Authorization,  RBAC vs ABAC, OAuth",
-              inclass: "Role Based Access Control, Attribute-Based Access Control select specific method or combination, select predefined roles (SaaS admin, tenant admin etc.), create initial access scheme",
+              inclass: "Role Based Access Control. Attribute-Based Access Control select specific method or combination. Select predefined roles (SaaS admin, tenant admin etc.), Create initial access scheme",
               homework: "",
               duration: 2
             },
@@ -216,44 +211,32 @@ export default class Home extends React.Component {
               title: "Message brokering",
               inclass: "Kafka as part of micro-services solution, communication process between services",
               homework: "",
-              duration: 2
+              duration: 1
             },
             {
               title: "Mobile-first, mobile-only",
-              inclass: "mobile application using Cordova",
+              inclass: "Add mobile application using Cordova",
               homework: "",
-              duration: 2
+              duration: 1
             },
             {
               title: "Multi-tenancy, Audit, Branding, GDPR Compliance",
               inclass: "",
               homework: "",
-              duration: 3
+              duration: 2
             },
             {
-              title: "Waterfall, RUP, Agile",
-              inclass: "every approach strong and weak points",
+              title: "Waterfall, RUP, Agile, Technical debt, Legacy systems, Refactoring",
+              inclass: "every approach strong and weak points. Discovery major sources of technical debt. How does legacy system form. Software maintenance & evolution. Refactoring as main tool for solving complex problems.",
               homework: "",
               duration: 1
             },
             {
-              title: "Technical debt, Legacy systems, Refactoring",
-              inclass: "major sources of technical debt, legacy system, support & evolution, refactoring as main tool for complex problems",
-              homework: "",
-              duration: 1
-            },
-            {
-              title: "Multithreading, Client-Server, P2P, Distributed computing, Lock-free algorithms, Caching, Journaling, Metaprogramming/Generics",
+              title: "Multithreading, Client-Server, P2P, Distributed computing, Lock-free algorithms, Caching, Journaling, Metaprogramming/Generics, Interprocess communication: mutex, semaphore, pipe, shared memory",
               inclass: "",
               homework: "",
-              duration: 3
+              duration: 2
             },
-            {
-              title: "Interprocess communication: mutex, semaphore, pipe, shared memory etc.",
-              inclass: "",
-              homework: "",
-              duration: 1
-            }
           ]
         },
         {
