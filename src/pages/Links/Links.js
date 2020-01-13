@@ -1,6 +1,6 @@
 import React from 'react';
 import './Links.css';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 import BasePage from './../BasePage/BasePage';
 
 export default class Calendar extends BasePage {
@@ -81,6 +81,16 @@ export default class Calendar extends BasePage {
               title: 'Serverless',
               url: 'https://martinfowler.com/articles/serverless.html',
               tags: []
+            },
+            {
+              title: 'Domain-Driven Design',
+              url: 'https://www.softwarearchitekt.at/aktuelles/sustainable-angular-architectures-1/',
+              tags: []
+            },
+            {
+              title: 'C4 model',
+              url: 'https://c4model.com/',
+              tags: []
             }
           ]
         },
@@ -125,7 +135,7 @@ export default class Calendar extends BasePage {
                 {l.tags.map((t, ti) => 
                   <span key={ti.toString()} class="badge badge-light float-right text-secondary">{t}</span>
                 )}
-                <a href={l.url} target="_blank" className="text-decoration-none text-dark">{l.title}</a>
+                <a href={l.url} target="_blank" rel="noopener noreferrer" className="text-decoration-none text-dark">{l.title}</a>
               </div>
             )}
           </div>

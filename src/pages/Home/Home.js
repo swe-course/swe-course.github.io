@@ -6,6 +6,7 @@ import BusinessIcon from '@material-ui/icons/Business';
 import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import Icon from '@material-ui/core/Icon';
+import Heavy from '../../media/heavy.png';
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -74,8 +75,11 @@ export default class Home extends React.Component {
         },
         {
           title: "Continuous Integration",
-          text: "Modern software development process. What are the key artifacts? How team members should collaborate to be able to quickly achieve goals? Main actors here are source control management, job scheduler, code quality verification tools and storage for artifacts.",
+          text: "Uncover modern software development process, discovery key artifacts, collaboration mechanisms, focus on source control management, job scheduler, code quality verification tools and storage for artifacts.",
           visible: true,
+          durations: {
+            practice: 45
+          },
           subsections: [
             {
               title: "Source Control Management Systems - Git",
@@ -87,13 +91,16 @@ export default class Home extends React.Component {
               title: "Branching & Release models",
               inclass: "Review pros & cons for mono-repo & multi-repo setup, discover gitflow as a basis for CI, become familiar with SaaS oriented release mode, push & drop concepts, discuss 12-factor framework and semantic versioning.",
               homework: "",
-              duration: 2
+              duration: 2,
+              level: 1
             },
             {
               title: "Jenkins",
               inclass: "Setup skeleton for pull-request/push CI build using Jenkins DSL and microservice repository.",
               homework: "Add naming convention status check.",
-              duration: 2
+              duration: 2,
+              level: 1,
+              practice: 0.75
             },
             {
               title: "Github",
@@ -118,19 +125,21 @@ export default class Home extends React.Component {
               title: "Code review process, User Story Isolation mechanics",
               inclass: "",
               homework: "Setup Pull Request code review process.",
-              duration: 1
+              duration: 2
             },
             {
               title: "TDD - Test Driven development",
               inclass: "Create nodejs based micro service for authentication, setup unit-tests infrastructure, add e2e tests and code coverage calculation.",
               homework: "",
-              duration: 2
+              duration: 2,
+              level: 1,
             },
             {
               title: "Test planning, Performance, Regression & Security testing, Vulnerability scanning, Automation e2e & UI testing, Manual testing",
               inclass: "Integrate third parties scan solution, create high level test plan, setup simple regression plan, define smoke tests scope.",
               homework: "",
-              duration: 3
+              duration: 2,
+              level: 1
             }
           ]
         },
@@ -143,19 +152,22 @@ export default class Home extends React.Component {
               title: "Software external quality factors: correctness, robustness, extensibility, reusability, etc.",
               inclass: "Learn how quality factors define architecture and help to select optimal pattern, understand modern software development challenges, unfold software development evolution and trends.",
               homework: "",
-              duration: 2
+              duration: 2,
+              level: 1
             },
             {
               title: "Architecture types: Standalone, N-tier, SOA, Microservices, Serverless, Web-Queue-Worker, Event-driven architecture, Big Data/Big Compute",
               inclass: "What is software architecture? How does every architecture model help to address customer's challanges? When to use and how properly align whole development process with selected type. Hybrid solutions. Select optimal architecture for PoC.",
               homework: "",
-              duration: 4
+              duration: 4,
+              level: 2
             },
             {
               title: "Requirements gathering, Pre-sales, Estimates, RFI/RFP",
               inclass: "How is software development integrated into other businesses? How sales deparment work in software domain: product, oursource, outstaff. Define list of unique sales points for PoC, apply priorities, setup roadmap.",
               homework: "",
-              duration: 2
+              duration: 2,
+              level: 1
             }
           ]
         },
@@ -169,7 +181,8 @@ export default class Home extends React.Component {
               title: "General project organization structure, component model, multi-component management system, minimum viable templates",
               inclass: "Setup project repository structure. Build skeleton for initial set of microservices & DBs. Create basic scripts for DevOps flow.",
               homework: "",
-              duration: 1
+              duration: 1,
+              level: 1
             },
             {
               title: "Data structures, key programming paradigms: procedural, object-oriented, functional, logic. Compilers vs Interpreters, Processes & Threads",
@@ -178,10 +191,11 @@ export default class Home extends React.Component {
               duration: 1
             },
             {
-              title: "'The Clean Architecture', Designs patterns, GRASP, UML, T-diagrams, MVC(MVVM), BFF - Backend For Frontend",
+              title: "'The Clean Architecture', Designs patterns, GRASP, UML, C4 model, MVC(MVVM), BFF - Backend For Frontend",
               inclass: "define list of features for the test project, create high-level product's UML diagram(s)",
               homework: "",
-              duration: 1
+              duration: 1,
+              level: 1
             },
             {
               title: "Inheritance vs Composition vs Aggregation, Composition vs Decomposition, Documentation, Error handling",
@@ -199,19 +213,22 @@ export default class Home extends React.Component {
               title: "CAP Theorem, RDBMS, NoSQL, Graph DB, DB migration, Sharding",
               inclass: "why do we need more than one type of DBs, when to use specific type of DBs, create DB migration skeleton",
               homework: "",
-              duration: 2
+              duration: 2,
+              level: 2
             },
             {
               title: "Authentication and Authorization,  RBAC vs ABAC, OAuth",
               inclass: "Role Based Access Control. Attribute-Based Access Control select specific method or combination. Select predefined roles (SaaS admin, tenant admin etc.), Create initial access scheme",
               homework: "",
-              duration: 2
+              duration: 2,
+              level: 2
             },
             {
               title: "Message brokering",
               inclass: "Kafka as part of micro-services solution, communication process between services",
               homework: "",
-              duration: 1
+              duration: 1,
+              level: 1
             },
             {
               title: "Mobile-first, mobile-only",
@@ -223,19 +240,22 @@ export default class Home extends React.Component {
               title: "Multi-tenancy, Audit, Branding, GDPR Compliance",
               inclass: "",
               homework: "",
-              duration: 2
+              duration: 2,
+              level: 3
             },
             {
               title: "Waterfall, RUP, Agile, Technical debt, Legacy systems, Refactoring",
               inclass: "every approach strong and weak points. Discovery major sources of technical debt. How does legacy system form. Software maintenance & evolution. Refactoring as main tool for solving complex problems.",
               homework: "",
-              duration: 1
+              duration: 1,
+              level: 1
             },
             {
               title: "Multithreading, Client-Server, P2P, Distributed computing, Lock-free algorithms, Caching, Journaling, Metaprogramming/Generics, Interprocess communication: mutex, semaphore, pipe, shared memory",
               inclass: "",
               homework: "",
-              duration: 2
+              duration: 2,
+              level: 3
             },
           ]
         },
@@ -254,19 +274,22 @@ export default class Home extends React.Component {
               title: "RESTful API, OpenAPI, GraphQL, API deprecation strategy",
               inclass: "",
               homework: "",
-              duration: 2
+              duration: 2,
+              level: 1
             },
             {
               title: "API management, API versioning, Pagination, Rate limits, Search",
               inclass: "Elasticsearch based microservice, configurable rate limits, (KONG, APIGee)",
               homework: "build CRUD for search API",
-              duration: 3
+              duration: 3,
+              level: 2
             },
             {
               title: "AI (ML/DL) overview",
               inclass: "tensorflow.js as part of frontend service",
               homework: "",
-              duration: 1
+              duration: 1,
+              level: 1
             }
           ]
         },
@@ -292,7 +315,8 @@ export default class Home extends React.Component {
               title: "Docker, Docker compose",
               inclass: "dockerize test project, multistage dockerfile",
               homework: "",
-              duration: 4
+              duration: 4,
+              level: 2
             }
           ]
         },
@@ -311,19 +335,22 @@ export default class Home extends React.Component {
               title: "Blue/Green, A/B, Canary deployment, 0-downtime, Rolling updates 'Follow the sun' strategy",
               inclass: "setup blue/green deployment",
               homework: "",
-              duration: 3
+              duration: 3,
+              level: 3
             },
             {
               title: "Environment variables, secrets, vaults",
               inclass: "",
               homework: "",
-              duration: 1
+              duration: 1,
+              level: 2
             },
             {
               title: "Kubernetes, Service mesh (Istio, Maesh/Linkerd, Anthos) overview",
               inclass: "",
               homework: "",
-              duration: 3
+              duration: 3,
+              level: 3
             }
           ]
         },
@@ -336,13 +363,15 @@ export default class Home extends React.Component {
               title: "Monitoring, Measuring, Alerting",
               inclass: "ELK cluster, collecting logs from microservices using Prometheus",
               homework: "",
-              duration: 5
+              duration: 5,
+              level: 2
             },
             {
               title: "Backup, Recovery strategy, Support (L1/L2/L3)",
               inclass: "",
               homework: "",
-              duration: 2
+              duration: 2,
+              level: 2
             },
             {
               title: "SRE, SLIs, SLOs, SLAs",
@@ -362,19 +391,22 @@ export default class Home extends React.Component {
               title: "Virtualization, Hardware level/User level",
               inclass: "",
               homework: "",
-              duration: 2
+              duration: 2,
+              level: 1
             },
             {
               title: "Cloud platforms overview, Hybrid Clouds solutions, Zones",
-              inclass: "AWS, Azure, Google Cloud, Digital Ocean",
+              inclass: "AWS, Azure, Google Cloud, Digital Ocean overview",
               homework: "",
-              duration: 2
+              duration: 2,
+              level: 2
             },
             {
               title: "High Availability, Cloud Architecture patterns",
               inclass: "review different architectures",
               homework: "",
-              duration: 4
+              duration: 4,
+              level: 3
             }
           ]
         }
@@ -447,6 +479,7 @@ export default class Home extends React.Component {
                         <div key={ssi.toString()} className="row m-0 pt-2">
                           <div className="col-1 p-1 bg-light text-center">{si}.{ssi+1}</div>
                           <div className="col p-1"><span className="font-weight-bold">{subsection.title}</span>
+                          {subsection.level && Array.from(Array(subsection.level)).map((e, i) => <img key={i} className="Heavy__logo float-right" src={Heavy} alt=""/>)}
                           <div>
                              {(subsection.inclass) && (<span className="badge badge-pill badge-light">in class</span>)} <span className="">{subsection.inclass}</span>
                             </div>

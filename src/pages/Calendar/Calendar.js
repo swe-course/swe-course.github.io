@@ -1,10 +1,10 @@
 import React from 'react';
 import './Calendar.css';
 import BasePage from './../BasePage/BasePage';
-import WorkIcon from '@material-ui/icons/Work';
+//import WorkIcon from '@material-ui/icons/Work';
 import SchoolIcon from '@material-ui/icons/School';
-import StarIcon from '@material-ui/icons/Star';
-import DoneAllIcon from '@material-ui/icons/DoneAll';
+//import StarIcon from '@material-ui/icons/Star';
+//import DoneAllIcon from '@material-ui/icons/DoneAll';
 
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
