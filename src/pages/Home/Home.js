@@ -312,7 +312,7 @@ export default class Home extends React.Component {
               duration: 2
             },
             {
-              title: "Docker, Docker compose",
+              title: "Docker, Docker compose, containerd",
               inclass: "dockerize test project, multistage dockerfile",
               homework: "",
               duration: 4,
