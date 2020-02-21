@@ -210,7 +210,7 @@ export default class Home extends React.Component {
               duration: 1
             },
             {
-              title: "CAP Theorem, RDBMS, NoSQL, Graph DB, DB migration, Sharding",
+              title: "CAP Theorem (RDBMS, NoSQL, Graph DB) DB migration, Sharding",
               inclass: "why do we need more than one type of DBs, when to use specific type of DBs, create DB migration skeleton",
               homework: "",
               duration: 2,
@@ -265,13 +265,13 @@ export default class Home extends React.Component {
           visible: false,
           subsections: [
             {
-              title: "Orthogonal API, Contract programming, S.O.L.I.D.",
+              title: "Orthogonal API, Contract programming, SOLID, ACIS",
               inclass: "",
               homework: "",
               duration: 2
             },
             {
-              title: "RESTful API, OpenAPI, GraphQL, API deprecation strategy",
+              title: "RESTful API, OpenAPI, GraphQL, gRPC, API deprecation strategy",
               inclass: "",
               homework: "",
               duration: 2,
@@ -548,7 +548,7 @@ export default class Home extends React.Component {
                     <p className="p-2">{t.text}</p>
                     <Link to={t.linkRef} className="text-decoration-none">
                       <div className="ml-4 pr-4">
-                        <button type="button" className="btn btn-info btn-block">{t.linkText}</button>
+                        <button type="button" className="btn btn-info btn-block" disabled>{t.linkText}</button>
                       </div>
                     </Link>
                   </div>

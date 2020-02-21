@@ -28,17 +28,16 @@ export default class Calendar extends BasePage {
 >
   <VerticalTimelineElement
     className="vertical-timeline-element--work"
-    date="2020/01/16"
+    date="2020/02/24"
     iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
     icon={<SchoolIcon />}
   >
-    <h3 className="vertical-timeline-element-title">Software Engineering - Basics</h3>
+    <h3 className="vertical-timeline-element-title">Software Engineering - Architecture & Design</h3>
     <h5 className="vertical-timeline-element-subtitle">Alteryx Ukraine, Kyiv, UA</h5>
     <p>
-      <h5>Continuous Integration - 8h</h5>
+      <h5>4h</h5>
     </p>
     <p>
-      Modern software development process. What are the key artifacts? How team members should collaborate to be able to quickly achieve goals? Main actors here are source control management, job scheduler, code quality verification tools and storage for artifacts.
     </p>
   </VerticalTimelineElement>
 </VerticalTimeline>
