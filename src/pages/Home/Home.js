@@ -27,7 +27,7 @@ export default class Home extends React.Component {
         {
           "title": "Target audience",
           "text": [
-            "IT engineers are involved into software development process (junior/junior+)"
+            "IT engineers are involved into software development process"
           ],
           "points": [
             "Developers",
@@ -398,14 +398,14 @@ export default class Home extends React.Component {
               title: "Cloud platforms overview, Hybrid Clouds solutions, Zones",
               inclass: "AWS, Azure, Google Cloud, Digital Ocean overview",
               homework: "",
-              duration: 2,
+              duration: 4,
               level: 2
             },
             {
               title: "High Availability, Cloud Architecture patterns",
               inclass: "review different architectures",
               homework: "",
-              duration: 4,
+              duration: 2,
               level: 3
             }
           ]
