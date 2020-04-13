@@ -17,9 +17,7 @@ export default class Home extends React.Component {
         {
           "title": "Motivation",
           "text": [
-            "Extremelly high rate of changes in IT brigs up next challange: young engineers miss fundamental ideas, principles and invariants in Software Development domain.",
-            "'Ten thousands hours rule' seems like not working any more. You need much more time to see big picture.",
-            "That is why the main goal of the course is help to develop strong understanding of modern software development process, discovery key sources of complexity and be aligned with IT trends."
+            "The main goal of the course is help engineers make a few steps in direction from Programming into the Software Development. Polyglot Programming and Polyglot Persistence is current state of the art and it applies more and more requirements to the developers' skillset."
           ],
           "points": [
           ]
