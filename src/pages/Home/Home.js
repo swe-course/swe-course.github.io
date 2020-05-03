@@ -17,7 +17,7 @@ export default class Home extends React.Component {
         {
           "title": "Motivation",
           "text": [
-            "The main goal of the course is help engineers make a few steps in direction from Programming into the Software Development. Polyglot Programming and Polyglot Persistence is current state of the art and it applies more and more requirements to the developers' skillset."
+            "The main goal of the course is to help engineers make a few steps in direction from Programming into the Software Development."
           ],
           "points": [
           ]
@@ -28,10 +28,6 @@ export default class Home extends React.Component {
             "IT engineers are involved into software development process"
           ],
           "points": [
-            "Developers",
-            "QA specialists",
-            "Devops, SRE",
-            "Support specialists"
           ]
         },
         {
@@ -43,7 +39,7 @@ export default class Home extends React.Component {
             "become familiar with modern SDLC (Software Development Life Cycle), including Git SCM (Source Control Management), code review process, Pull Request/Push builds, TDD (Test Driven Development)",
             "have detailed information about Release and Branching models, when and why use User Story Isolation, how to set up an effective collaboration ecosystem within development team",
             "be able to setup Continuous Integration subsystems based on Jenkins, configure integrations between Github, Jenkins, SonarQube & Nexus",
-            "setup simple testing framework, including unit tests, end-to-end tests, smoke tests, build regression plan, configure SonarQube to work with code coverage and Quality Gates",
+            "setup simple testing framework, including unit tests, end2end tests, smoke tests, build regression plan, configure SonarQube to work with code coverage and Quality Gates",
             "understand difference between Software Architecture & Software design, know how and when use different patterns and how to transform business inputs into technical terms. When is N-tier architecture better then Microservices and vise versa",
             "be able to build RESTful and GraphQL APIs, have strong understanding about Orthogonal API and how build it, decompose high-level tasks using Design Patterns",
             "develop mobile application using Cordova & HTML5 (iOS/Android)",
@@ -81,20 +77,20 @@ export default class Home extends React.Component {
           subsections: [
             {
               title: "Source Control Management Systems - Git",
-              inclass: "Setup ssh-based connection with remote VM, create bare git repository, play with commit, branch, remote, submodule, subtree, tag, stash, merge, rebase and log features.",
+              inclass: "Setup ssh-based connection with remote VM, create bare git repository, play with commit, branch, remote, submodule, subtree, tag, stash, merge, rebase and log features. Discover gitops concept as basis for strong CI/CD.",
               homework: "",
               duration: 2
             },
             {
               title: "Branching & Release models",
-              inclass: "Review pros & cons for mono-repo & multi-repo setup, discover gitflow as a basis for CI, become familiar with SaaS oriented release mode, push & drop concepts, discuss 12-factor framework and semantic versioning.",
+              inclass: "Review pros & cons for mono-repo & multi-repo setup, gitflow approach, become familiar with SaaS oriented release mode, push & drop concepts, discuss 12-factor framework and semantic versioning.",
               homework: "",
               duration: 2,
               level: 1
             },
             {
               title: "Jenkins",
-              inclass: "Setup skeleton for pull-request/push CI build using Jenkins DSL and microservice repository.",
+              inclass: "Setup skeleton for pull-request/push CI build using Jenkins DSL and repository for microservices-based project.",
               homework: "Add naming convention status check.",
               duration: 2,
               level: 1,
