@@ -3,6 +3,9 @@ import './Links.css';
 //import { Link } from 'react-router-dom';
 import BasePage from './../BasePage/BasePage';
 
+
+// GitOps - https://www.weave.works/blog/gitops-operations-by-pull-request
+
 export default class Calendar extends BasePage {
   constructor(props){
     super(props);
