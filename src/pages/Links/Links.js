@@ -28,6 +28,11 @@ export default class Calendar extends BasePage {
               tags: ['scm']
             },
             {
+              title: 'Trunk Based Development',
+              url: 'https://trunkbaseddevelopment.com/',
+              tags: ['scm']
+            },
+            {
               title: 'Validation & Verification',
               url: 'https://www.easterbrook.ca/steve/2010/11/the-difference-between-verification-and-validation/',
               tags: ['sdlc', 'qa']

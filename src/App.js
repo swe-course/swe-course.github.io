@@ -15,13 +15,13 @@ function App() {
   return (
     <div className="App d-flex flex-column h-100">
       <Navbar hostUrl="." titleShort="SWE Course" titleLong="Software Engineering Course"/>
-          <div className="container-fluid bg-light">
-            <div className="row text-right">
-              <div className="offset-sm-8 col-sm small pr-5 mr-sm-5 pb-1">
-                <Link to={'/calendar'} className="text-dark">calendar</Link> &#183; <Link to={'/blog'} className="text-dark">blog</Link> &#183; <Link to={'/links'} className="text-dark">links</Link>
-              </div>
-            </div>
+      <div className="container-fluid Switch">
+        <div className="row text-right">
+          <div className="offset-sm-8 col-sm small pr-5 mr-sm-5 pb-1">
+            <Link to={'/calendar'} className="text-dark">calendar</Link> &#183; <Link to={'/blog'} className="text-dark">blog</Link> &#183; <Link to={'/links'} className="text-dark">links</Link>
           </div>
+        </div>
+      </div>
       <Switch>
         <Route exact path='/' component={Home} />
         <Route exact path='/home' component={Home} />
@@ -29,7 +29,7 @@ function App() {
         <Route exact path='/blog' component={Blog} />
         <Route exact path='/links' component={Links} />
       </Switch>
-      <Footer version="v20.5.0"/>
+      <Footer version="v20.9.0"/>
     </div>
   );
 }

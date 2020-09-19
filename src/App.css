@@ -1,2 +1,10 @@
 .App {
 }
+
+.Switch {
+  background: rgb(248,248,248);
+  background: -moz-linear-gradient(180deg, rgba(248,248,248,1) 0%, rgba(255,255,255,1) 58%);
+  background: -webkit-linear-gradient(180deg, rgba(248,248,248,1) 0%, rgba(255,255,255,1) 58%);
+  background: linear-gradient(180deg, rgba(248,248,248,1) 0%, rgba(255,255,255,1) 58%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f8f8f8",endColorstr="#ffffff",GradientType=1);
+}

@@ -7,6 +7,7 @@ import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import Icon from '@material-ui/core/Icon';
 import Heavy from '../../media/heavy.png';
+import Citddo from '../../media/citddo.png';
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -17,18 +18,17 @@ export default class Home extends React.Component {
         {
           "title": "Motivation",
           "text": [
-            "The main goal of the course is to help engineers make a few steps in direction from Programming into the Software Development."
+            "The main goal of the course is to help engineers make steps in direction from Programming to the Software Development."
           ],
-          "points": [
-          ]
+          "points": [],
+          "image": "asasa"
         },
         {
           "title": "Target audience",
           "text": [
             "IT engineers are involved into software development process"
           ],
-          "points": [
-          ]
+          "points": []
         },
         {
           "title": "Deliverables",
@@ -432,7 +432,7 @@ export default class Home extends React.Component {
   renderTopics() {
     return this.state.topics.map((topic, ti) => {
       const last = ti === this.state.topics.length - 1;
-      const { title, text, points } = topic;
+      const { title, text, points, image } = topic;
       //
       return (
         <div key={ti.toString()}>
@@ -447,7 +447,8 @@ export default class Home extends React.Component {
           <ul>
             {points.map((p, pi) => <li key={pi.toString()}>{p}</li>)}              
           </ul>
-          {last ? <div/>: <hr className="my-4" />}
+          {image ? <img src={Citddo} class="img-fluid" alt=""/> : <div/>}
+          {(last || image) ? <div/>: <hr className="my-4" />}
         </div>
       )
     })
@@ -504,7 +505,7 @@ export default class Home extends React.Component {
   render() {
     return (
       <div className="">
-        <div className="jumbotron bg-light border-0 rounded-0 pb-4 pt-4 mb-0">
+        <div className="jumbotron bg-white border-0 rounded-0 pb-4 pt-4 mb-0">
           <div className="container-fluid">
             <div className="row">
               <div className="offset-sm-2 col-sm-8">
@@ -513,14 +514,14 @@ export default class Home extends React.Component {
             </div>
           </div>
         </div>
-        <div className="container-fluid pb-2 pt-0">
+        <div className="container-fluid bg-light pb-2 pt-0">
           <div className="row">
             <div className="offset-sm-2 col-sm-8">
               {this.renderSections()}
             </div>
           </div>
         </div>
-        <div className="jumbotron bg-light border-0 rounded-0 m-0 mt-4 pb-2">
+        <div className="jumbotron bg-white border-0 rounded-0 m-0 mt-4 pb-2">
           <div className="container-fluid">
             <div className="row text-center">
               {[
